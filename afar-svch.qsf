@@ -1,0 +1,382 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+# Date created = 19:14:57  December 13, 2018
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		afar-svch_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 2
+set_global_assignment -name FAMILY "Arria V"
+set_global_assignment -name DEVICE 5AGXMA1D4F31I5
+set_global_assignment -name TOP_LEVEL_ENTITY top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.0.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:14:57  DECEMBER 13, 2018"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Standard Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (SystemVerilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "SYSTEMVERILOG HDL" -section_id eda_simulation
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_J16 -to LED1
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "ACTIVE SERIAL X4"
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN ON
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name ACTIVE_SERIAL_CLOCK FREQ_100MHZ
+set_location_assignment PIN_T4 -to LOCAL_CLK
+set_location_assignment PIN_AE17 -to ddr3_a[14]
+set_location_assignment PIN_AA17 -to ddr3_a[13]
+set_location_assignment PIN_AB17 -to ddr3_a[12]
+set_location_assignment PIN_AA16 -to ddr3_a[11]
+set_location_assignment PIN_AB16 -to ddr3_a[10]
+set_location_assignment PIN_AG17 -to ddr3_a[9]
+set_location_assignment PIN_AH17 -to ddr3_a[8]
+set_location_assignment PIN_AC16 -to ddr3_a[7]
+set_location_assignment PIN_AD16 -to ddr3_a[6]
+set_location_assignment PIN_AJ18 -to ddr3_a[5]
+set_location_assignment PIN_AK17 -to ddr3_a[4]
+set_location_assignment PIN_AF16 -to ddr3_a[3]
+set_location_assignment PIN_AG16 -to ddr3_a[2]
+set_location_assignment PIN_AA15 -to ddr3_a[1]
+set_location_assignment PIN_AB15 -to ddr3_a[0]
+set_location_assignment PIN_AB18 -to ddr3_ba[2]
+set_location_assignment PIN_AE18 -to ddr3_ba[1]
+set_location_assignment PIN_AF18 -to ddr3_ba[0]
+set_location_assignment PIN_AH18 -to ddr3_casn
+set_location_assignment PIN_AJ16 -to ddr3_ck_n
+set_location_assignment PIN_AK16 -to ddr3_ck_p
+set_location_assignment PIN_AD15 -to ddr3_cke
+set_location_assignment PIN_AK19 -to ddr3_csn
+set_location_assignment PIN_AB13 -to ddr3_dm[1]
+set_location_assignment PIN_AF15 -to ddr3_dm[0]
+set_location_assignment PIN_AF12 -to ddr3_dq[15]
+set_location_assignment PIN_AF13 -to ddr3_dq[14]
+set_location_assignment PIN_AK12 -to ddr3_dq[13]
+set_location_assignment PIN_AB12 -to ddr3_dq[12]
+set_location_assignment PIN_AC12 -to ddr3_dq[11]
+set_location_assignment PIN_Y13 -to ddr3_dq[10]
+set_location_assignment PIN_AG11 -to ddr3_dq[9]
+set_location_assignment PIN_AH11 -to ddr3_dq[8]
+set_location_assignment PIN_AG15 -to ddr3_dq[7]
+set_location_assignment PIN_AH15 -to ddr3_dq[6]
+set_location_assignment PIN_AH14 -to ddr3_dq[5]
+set_location_assignment PIN_AD13 -to ddr3_dq[4]
+set_location_assignment PIN_AE13 -to ddr3_dq[3]
+set_location_assignment PIN_AE14 -to ddr3_dq[2]
+set_location_assignment PIN_AH13 -to ddr3_dq[1]
+set_location_assignment PIN_AJ13 -to ddr3_dq[0]
+set_location_assignment PIN_AG12 -to ddr3_dqs_n[1]
+set_location_assignment PIN_AJ15 -to ddr3_dqs_n[0]
+set_location_assignment PIN_AH12 -to ddr3_dqs_p[1]
+set_location_assignment PIN_AK14 -to ddr3_dqs_p[0]
+set_location_assignment PIN_AD18 -to ddr3_odt
+set_location_assignment PIN_AA18 -to ddr3_rasn
+set_location_assignment PIN_AA14 -to ddr3_resetn
+set_location_assignment PIN_AH19 -to ddr3_wen
+set_location_assignment PIN_AF4 -to ddr3_rzq
+set_instance_assignment -name IO_STANDARD "SSTL-15" -to ddr3_rzq -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD 1.5V -to ddr3_resetn -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_dqs_p[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_dqs_p[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_dqs_n[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_dqs_n[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_dq[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_dq[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_dq[2] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_dq[3] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_dq[4] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_dq[5] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_dq[6] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_dq[7] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_dq[8] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_dq[9] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_dq[10] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_dq[11] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_dq[12] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_dq[13] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_dq[14] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_dq[15] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_dm[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_dm[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_wen -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_rasn -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_odt -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_csn -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_cke -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_ck_p -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_ck_n -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_casn -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_ba[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_ba[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_ba[2] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_a[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_a[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_a[2] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_a[3] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_a[4] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_a[5] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_a[6] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_a[7] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_a[8] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_a[9] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_a[10] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_a[11] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_a[12] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_a[13] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_a[14] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LOCAL_CLK
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3_dq[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3_dq[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3_dq[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3_dq[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3_dq[2] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3_dq[2] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3_dq[3] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3_dq[3] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3_dq[4] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3_dq[4] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3_dq[5] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3_dq[5] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3_dq[6] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3_dq[6] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3_dq[7] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3_dq[7] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3_dq[8] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3_dq[8] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3_dq[9] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3_dq[9] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3_dq[10] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3_dq[10] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3_dq[11] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3_dq[11] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3_dq[12] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3_dq[12] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3_dq[13] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3_dq[13] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3_dq[14] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3_dq[14] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3_dq[15] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3_dq[15] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3_dqs_p[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3_dqs_p[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D5_DELAY 6 -to ddr3_dqs_p[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D6_DELAY 0 -to ddr3_dqs_p[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3_dqs_p[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3_dqs_p[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D5_DELAY 6 -to ddr3_dqs_p[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D6_DELAY 0 -to ddr3_dqs_p[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3_dqs_n[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3_dqs_n[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D5_DELAY 6 -to ddr3_dqs_n[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D6_DELAY 0 -to ddr3_dqs_n[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3_dqs_n[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3_dqs_n[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D5_DELAY 6 -to ddr3_dqs_n[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D6_DELAY 0 -to ddr3_dqs_n[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITHOUT CALIBRATION" -to ddr3_ck_p -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D5_DELAY 2 -to ddr3_ck_p -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITHOUT CALIBRATION" -to ddr3_ck_n -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D5_DELAY 2 -to ddr3_ck_n -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_a[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_a[10] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_a[11] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_a[12] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_a[13] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_a[14] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_a[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_a[2] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_a[3] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_a[4] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_a[5] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_a[6] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_a[7] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_a[8] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_a[9] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_ba[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_ba[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_ba[2] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_csn -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_wen -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_rasn -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_casn -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_odt -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_cke -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_resetn -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3_dm[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3_dm[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_dq[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_dq[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_dq[2] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_dq[3] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_dq[4] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_dq[5] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_dq[6] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_dq[7] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_dq[8] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_dq[9] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_dq[10] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_dq[11] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_dq[12] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_dq[13] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_dq[14] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_dq[15] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_dm[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_dm[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_dqs_p[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_dqs_p[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_dqs_n[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_dqs_n[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_a[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_a[10] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_a[11] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_a[12] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_a[13] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_a[14] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_a[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_a[2] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_a[3] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_a[4] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_a[5] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_a[6] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_a[7] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_a[8] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_a[9] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_ba[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_ba[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_ba[2] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_csn -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_wen -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_rasn -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_casn -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_odt -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_cke -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_resetn -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_ck_p -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3_ck_n -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to u0|mem_if_ddr3_emif_0|pll0|pll_addr_cmd_clk -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to u0|mem_if_ddr3_emif_0|pll0|pll_afi_clk -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to u0|mem_if_ddr3_emif_0|pll0|pll_hr_clk -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to u0|mem_if_ddr3_emif_0|pll0|pll_avl_clk -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to u0|mem_if_ddr3_emif_0|pll0|pll_config_clk -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|ureset|phy_reset_mem_stable_n -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|ureset|phy_reset_n -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|s0|sequencer_rw_mgr_inst|rw_mgr_inst|rw_mgr_core_inst|rw_soft_reset_n -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uio_pads|dq_ddio[0].read_capture_clk_buffer -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_write_side[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[0] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uio_pads|dq_ddio[1].read_capture_clk_buffer -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_write_side[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[1] -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name ENABLE_BENEFICIAL_SKEW_OPTIMIZATION_FOR_NON_GLOBAL_CLOCKS ON -to u0|mem_if_ddr3_emif_0 -tag __nios_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PLL_COMPENSATION_MODE DIRECT -to u0|mem_if_ddr3_emif_0|pll0|fbout -tag __nios_mem_if_ddr3_emif_0_p0
+set_global_assignment -name USE_DLL_FREQUENCY_FOR_DQS_DELAY_CHAIN ON
+set_global_assignment -name UNIPHY_SEQUENCER_DQS_CONFIG_ENABLE ON
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
+set_global_assignment -name ECO_REGENERATE_REPORT ON
+set_global_assignment -name QSYS_FILE ip/altclkctrl0/altclkctrl0.qsys
+set_global_assignment -name QSYS_FILE nios/nios.qsys
+set_global_assignment -name SYSTEMVERILOG_FILE src/top.sv
+set_global_assignment -name SDC_FILE src/tmie.sdc
+set_location_assignment PIN_G21 -to key0
+set_location_assignment PIN_H21 -to key1
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH tb -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb -section_id tb
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/tb.v -section_id tb
+set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name USE_SIGNALTAP_FILE output_files/stp1.stp
+set_global_assignment -name SIGNALTAP_FILE output_files/stp1.stp
+set_global_assignment -name PARTITION_NETLIST_TYPE POST_SYNTH -section_id "nios:u0"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id "nios:u0"
+set_global_assignment -name PARTITION_COLOR 39423 -section_id "nios:u0"
+set_global_assignment -name PARTITION_NETLIST_TYPE POST_FIT -section_id "nios_jtag_uart_0:jtag_uart_0"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id "nios_jtag_uart_0:jtag_uart_0"
+set_global_assignment -name PARTITION_COLOR 52377 -section_id "nios_jtag_uart_0:jtag_uart_0"
+set_global_assignment -name PARTITION_NETLIST_TYPE POST_FIT -section_id "nios_mem_if_ddr3_emif_0:mem_if_ddr3_emif_0"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id "nios_mem_if_ddr3_emif_0:mem_if_ddr3_emif_0"
+set_global_assignment -name PARTITION_COLOR 16776960 -section_id "nios_mem_if_ddr3_emif_0:mem_if_ddr3_emif_0"
+set_global_assignment -name PARTITION_NETLIST_TYPE POST_FIT -section_id "nios_mm_interconnect_0:mm_interconnect_0"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id "nios_mm_interconnect_0:mm_interconnect_0"
+set_global_assignment -name PARTITION_COLOR 16711935 -section_id "nios_mm_interconnect_0:mm_interconnect_0"
+set_global_assignment -name PARTITION_NETLIST_TYPE POST_FIT -section_id "nios_nios2_gen2_0:nios2_gen2_0"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id "nios_nios2_gen2_0:nios2_gen2_0"
+set_global_assignment -name PARTITION_COLOR 65535 -section_id "nios_nios2_gen2_0:nios2_gen2_0"
+set_global_assignment -name PARTITION_NETLIST_TYPE POST_FIT -section_id "nios_onchip_memory2_0:onchip_memory2_0"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id "nios_onchip_memory2_0:onchip_memory2_0"
+set_global_assignment -name PARTITION_COLOR 16777164 -section_id "nios_onchip_memory2_0:onchip_memory2_0"
+set_global_assignment -name PARTITION_NETLIST_TYPE POST_FIT -section_id "nios_pio_0:pio_0"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id "nios_pio_0:pio_0"
+set_global_assignment -name PARTITION_COLOR 10198015 -section_id "nios_pio_0:pio_0"
+set_global_assignment -name PARTITION_NETLIST_TYPE POST_FIT -section_id "altera_reset_controller:rst_controller"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id "altera_reset_controller:rst_controller"
+set_global_assignment -name PARTITION_COLOR 32896 -section_id "altera_reset_controller:rst_controller"
+set_global_assignment -name PARTITION_NETLIST_TYPE POST_FIT -section_id "altera_reset_controller:rst_controller_001"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id "altera_reset_controller:rst_controller_001"
+set_global_assignment -name PARTITION_COLOR 14622752 -section_id "altera_reset_controller:rst_controller_001"
+set_global_assignment -name PARTITION_NETLIST_TYPE POST_FIT -section_id "nios_timer_0:timer_0"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id "nios_timer_0:timer_0"
+set_global_assignment -name PARTITION_COLOR 2105567 -section_id "nios_timer_0:timer_0"
+set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name AUTO_EXPORT_INCREMENTAL_COMPILATION OFF
+set_global_assignment -name INCREMENTAL_COMPILATION_EXPORT_FILE top.qxp
+set_global_assignment -name INCREMENTAL_COMPILATION_EXPORT_POST_SYNTH ON
+set_global_assignment -name INCREMENTAL_COMPILATION_EXPORT_POST_FIT ON
+set_global_assignment -name INCREMENTAL_COMPILATION_EXPORT_ROUTING ON
+set_global_assignment -name INCREMENTAL_COMPILATION_EXPORT_PARTITION_NAME Top
+set_global_assignment -name INCREMENTAL_COMPILATION_EXPORT_FLATTEN ON
+set_global_assignment -name PARTITION_IMPORT_FILE top.qxp -section_id "nios:u0"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY rstco_0b591 -to "nios:u0|altera_reset_controller:rst_controller" -section_id "altera_reset_controller:rst_controller"
+set_instance_assignment -name PARTITION_HIERARCHY rstco_64991 -to "nios:u0|altera_reset_controller:rst_controller_001" -section_id "altera_reset_controller:rst_controller_001"
+set_instance_assignment -name PARTITION_HIERARCHY u0_a56a1 -to "nios:u0" -section_id "nios:u0"
+set_instance_assignment -name PARTITION_HIERARCHY jtagu_23881 -to "nios:u0|nios_jtag_uart_0:jtag_uart_0" -section_id "nios_jtag_uart_0:jtag_uart_0"
+set_instance_assignment -name PARTITION_HIERARCHY memif_38721 -to "nios:u0|nios_mem_if_ddr3_emif_0:mem_if_ddr3_emif_0" -section_id "nios_mem_if_ddr3_emif_0:mem_if_ddr3_emif_0"
+set_instance_assignment -name PARTITION_HIERARCHY mmint_731e1 -to "nios:u0|nios_mm_interconnect_0:mm_interconnect_0" -section_id "nios_mm_interconnect_0:mm_interconnect_0"
+set_instance_assignment -name PARTITION_HIERARCHY nios2_fe161 -to "nios:u0|nios_nios2_gen2_0:nios2_gen2_0" -section_id "nios_nios2_gen2_0:nios2_gen2_0"
+set_instance_assignment -name PARTITION_HIERARCHY onchi_10931 -to "nios:u0|nios_onchip_memory2_0:onchip_memory2_0" -section_id "nios_onchip_memory2_0:onchip_memory2_0"
+set_instance_assignment -name PARTITION_HIERARCHY pio0_86dc1 -to "nios:u0|nios_pio_0:pio_0" -section_id "nios_pio_0:pio_0"
+set_instance_assignment -name PARTITION_HIERARCHY timer_90d31 -to "nios:u0|nios_timer_0:timer_0" -section_id "nios_timer_0:timer_0"

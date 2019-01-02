@@ -1,0 +1,14 @@
+*~
+*.csv
+*.bak
+*.sopcinfo
+*.qxp
+*.txt
+*.qarlog
+.qsys_edit/
+db/
+nios/
+!nios/*.qsys
+simulation/
+soft/
+/ip/altclkctrl0/altclkctrl0/
